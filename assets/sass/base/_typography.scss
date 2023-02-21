@@ -1,0 +1,107 @@
+body {
+  font-family: $font-primary;
+  color: $color-primary;
+  font-size: $default-font-size;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.6rem;
+  @include respond(phone-small) {
+    font-size: 12px;
+    line-height: 14px;
+  }
+}
+
+.heading-primary {
+  color: transparent;
+  font-size: 32px;
+  line-height: 32px;
+  @include respond(phone) {
+    font-size: 24px;
+    line-height: 24px;
+  }
+  @include respond(phone-small) {
+    font-size: 18px;
+    line-height: 18px;
+  }
+  // margin-bottom: 6rem;
+
+  &--sub {
+    display: block;
+    font-size: 16px;
+    @include respond(phone) {
+      font-size: 14px;
+      line-height: 22px;
+    }
+    @include respond(phone-small) {
+      font-size: 12px;
+      line-height: 16px;
+    }
+
+    &__grey {
+      color: $color-grey--light;
+    }
+  }
+}
+
+.heading-secondary {
+  font-size: 2.4rem;
+  font-weight: 700;
+  display: inline-block;
+  line-height: 3rem;
+  letter-spacing: -0.02em;
+  transition: all 0.2s ease;
+  &--white {
+    color: $color-white;
+  }
+
+  @include respond(phone-small) {
+    font-size: 18px;
+    line-height: 23px;
+  }
+
+  // &--large {
+  //   font-size: 3.2rem;
+  //   line-height: 3.5rem;
+  //   @include respond(phone) {
+  //     font-size: 24px;
+  //     line-height: 26px;
+  //   }
+  //   @include respond(phone-small) {
+  //     font-size: 18px;
+  //     line-height: 20px;
+  //   }
+  // }
+}
+
+.heading-tertiary {
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 23px;
+  letter-spacing: -0.02em;
+  @include respond(phone-small) {
+    font-size: 16px;
+    line-height: 120%;
+  }
+}
+
+.heading-h4 {
+  font-weight: 700;
+  font-size: 2rem;
+  line-height: 2.2rem;
+  @include respond(phone-small) {
+    font-size: 18px;
+    line-height: 20px;
+  }
+  /* identical to box height */
+  letter-spacing: -0.02em;
+  color: $color-primary;
+}
+
+.sub-heading {
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: -0.02em;
+  &--upper {
+    text-transform: uppercase;
+  }
+}

@@ -1,0 +1,32 @@
+.section-hero {
+  // grid-column: center-start / center-end;
+  overflow: hidden;
+  height: 40.8rem;
+  @include respond(tab-land) {
+    height: 30.8rem;
+  }
+  position: relative;
+  margin-bottom: 4rem;
+  // padding: 6.8rem 5.2rem;
+  border-radius: 2.4rem;
+  // height: 521px;
+  &--slide {
+    display: grid;
+    grid-template-columns: auto 2fr;
+    gap: 6rem;
+    @include respond(small-desktop-2) {
+      gap: 0rem;
+    }
+  }
+  @include respond(tablet) {
+    margin-bottom: 24px;
+  }
+  @include respond(phone) {
+    margin: 0;
+    &,
+    & .hero__back {
+      border-radius: 0 !important;
+    }
+    margin-bottom: 16px;
+  }
+}

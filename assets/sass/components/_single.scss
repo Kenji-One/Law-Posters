@@ -1,0 +1,63 @@
+.single {
+  max-width: 89.8rem;
+  margin: 0 auto;
+
+  &__dot-p {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    @include respond(phone) {
+      margin-bottom: 0 !important;
+    }
+  }
+
+  &__dot {
+    display: inline-block;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: rgba(6, 22, 47, 0.6);
+  }
+  &__head {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+
+  &__icons {
+    display: flex;
+    align-items: center;
+    gap: 2.4rem;
+    & svg {
+      display: inline-block;
+      width: 24px;
+      height: 24px;
+    }
+  }
+
+  &__text {
+    font-weight: 400;
+
+    color: rgba(6, 22, 47, 0.7);
+  }
+
+  &__continue-posts {
+    .heading-secondary {
+      grid-column: 1 / -1;
+    }
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 2.4rem;
+    row-gap: 3.2rem;
+    @include respond(phone) {
+      grid-template-columns: 1fr;
+      row-gap: 24px;
+    }
+    @include respond(phone-small) {
+      row-gap: 16px;
+    }
+  }
+}

@@ -1,0 +1,181 @@
+.profile {
+  max-width: 898px;
+  margin: 5.6rem auto 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 3.2rem;
+  @include respond(tab-port) {
+    margin-top: 16px;
+    gap: 32px;
+  }
+  @include respond(phone-small) {
+    margin-top: 8px;
+    gap: 24px;
+  }
+  &__edit {
+    padding-bottom: 5.2rem;
+    border-bottom: 1px solid #ececef;
+    margin-bottom: 5.2rem;
+    @include respond(tablet) {
+      padding-bottom: 40px;
+      margin-bottom: 40px;
+    }
+    @include respond(tablet) {
+      padding-bottom: 32px;
+      margin-bottom: 32px;
+    }
+  }
+
+  &__head {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    margin-bottom: 3rem;
+    @include respond(tablet) {
+      margin-bottom: -16px;
+    }
+    @include respond(phone-small) {
+      gap: 24px;
+      margin-bottom: 0;
+    }
+    &--img-box {
+      width: 13rem;
+      height: 13rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: 1.5px solid rgba(6, 22, 47, 0.2);
+      border-radius: 50%;
+      & img {
+        width: 11.8rem;
+        height: 11.8rem;
+      }
+    }
+  }
+
+  &__option {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 14px;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #ececef;
+    padding-bottom: 2rem;
+
+    &:nth-of-type(3) {
+      padding-bottom: 4.2rem;
+    }
+    &:nth-of-type(4) {
+      border: none;
+    }
+    @include respond(phone) {
+      grid-template-columns: 1fr;
+      gap: 8px;
+      border: none;
+      padding-bottom: 0 !important;
+    }
+    &--input {
+      border: 1px solid rgba(6, 22, 47, 0.1);
+      border-radius: 6px;
+      width: 100%;
+      max-width: 552px;
+      padding: 20px 32px;
+    }
+
+    &--right {
+      width: 100%;
+      max-width: 552px;
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      & img {
+        width: 80px;
+        height: 80px;
+      }
+      &--options {
+        display: flex;
+        align-items: center;
+        gap: 1.4rem;
+      }
+    }
+
+    &--btn {
+      background: none;
+      border: none;
+      cursor: pointer;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 100%;
+      border-bottom: 1px solid #fff;
+      transition: all 0.3s;
+      &.red {
+        color: #cf3a40;
+        &:hover {
+          border-color: #3970ce;
+        }
+      }
+      &.blue {
+        color: #3970ce;
+        &:hover {
+          border-color: #cf3a40;
+        }
+      }
+    }
+
+    &--left {
+      max-width: 267px;
+    }
+  }
+
+  &__img-box {
+    padding: 4px;
+    border-radius: 50%;
+    width: 92px;
+    height: 92px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1.5px solid rgba(6, 22, 47, 0.2);
+  }
+
+  &__btns {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    gap: 2.4rem;
+    .btn__white {
+      border: 1px solid rgba(6, 22, 47, 0.2);
+    }
+  }
+
+  &__booked {
+    display: grid;
+    gap: 2.4rem;
+    padding-bottom: 5.2rem;
+    border-bottom: 1px solid #ececef;
+    grid-template-columns: repeat(4, 1fr);
+    @include respond(tablet) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    @include respond(tab-phone) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @include respond(phone) {
+      gap: 16px;
+      padding-bottom: 32px;
+    }
+
+    .heading-secondary {
+      grid-column: 1 / -1;
+    }
+    .course .course__img-box {
+      padding-top: 3.2rem;
+      padding-bottom: 3.2rem;
+    }
+
+    &--start-date {
+      color: #3970ce;
+    }
+  }
+}
