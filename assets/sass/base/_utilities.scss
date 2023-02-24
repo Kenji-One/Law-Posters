@@ -61,7 +61,7 @@
 .u-margin-bottom-small {
   margin-bottom: 2.4rem !important;
   @include respond(phone-small) {
-    margin-bottom: 8px !important;
+    margin-bottom: 16px !important;
     &.heading-h4 {
       margin-bottom: 16px !important;
     }

@@ -191,14 +191,6 @@
       justify-content: space-between;
       &.drop-down__before-box {
         margin-bottom: 12px;
-        & i.fa-chevron-down {
-          transition: all 0.3s;
-        }
-        &.active {
-          & i.fa-chevron-down {
-            transform: rotate(180deg);
-          }
-        }
       }
     }
   }
@@ -342,4 +334,14 @@
   border: none;
   background: none;
   font-size: 32px;
+}
+.drop-down__before-box {
+  & i.fa-chevron-down {
+    transition: all 0.3s;
+  }
+  &.active {
+    & i.fa-chevron-down {
+      transform: rotate(180deg);
+    }
+  }
 }

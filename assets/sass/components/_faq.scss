@@ -1,0 +1,24 @@
+.faq {
+  &__questions {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    list-style-type: none;
+    background: #fafafb;
+    // border: 1px solid #d1d1d2;
+    border-radius: 5px;
+    padding: 24px;
+  }
+
+  &__title {
+    color: $color-blue;
+    padding: 24px;
+    @include alignCenter;
+    justify-content: space-between;
+    gap: 24px;
+  }
+
+  &__answer {
+    color: $color-grey--light;
+  }
+}

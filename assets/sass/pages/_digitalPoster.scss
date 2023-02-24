@@ -1,0 +1,159 @@
+.digital-poster {
+  #con-349j {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+
+  .poster {
+    &__solutions {
+      @include alignCenter;
+      justify-content: space-around;
+      gap: 12px;
+      width: 100%;
+      max-width: 50rem;
+      margin-bottom: 32px;
+    }
+
+    &__solution {
+      @include alignCenter;
+      flex-direction: column;
+      gap: 8px;
+      & i {
+        color: $color-blue;
+        font-size: 32px;
+      }
+      & p {
+        color: $color-orange;
+      }
+    }
+  }
+
+  .section-widget-setState {
+    padding: 24px;
+    gap: 3.2rem;
+    @include respond(phone) {
+      padding: 16px;
+      padding-top: 8px;
+    }
+
+    align-items: unset;
+    justify-items: center;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    border-bottom: none;
+  }
+
+  .setState {
+    &__right {
+      @include alignCenter;
+      flex-direction: column;
+    }
+
+    &__p {
+      line-height: 22px;
+    }
+  }
+}
+
+.section-willGet {
+  color: $color-white;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  margin-bottom: 4.8rem;
+  .willGet {
+    &__top {
+      padding: 3.2rem;
+      background-color: $color-blue;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      @include respond(phone) {
+        grid-template-columns: 1fr;
+      }
+      gap: 16px;
+      & ul {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+        padding-left: 20px;
+      }
+
+      &--left {
+        max-width: 46rem;
+      }
+    }
+
+    &__bottom {
+      background: url(../imgs/bg-image.png) no-repeat padding-box;
+      background-size: cover;
+      padding: 24px;
+      & p {
+        max-width: 70rem;
+        margin: auto;
+      }
+      border-bottom-left-radius: 5px;
+      border-bottom-right-radius: 5px;
+    }
+  }
+}
+
+.section-aboutCompany {
+  margin-bottom: 4.8rem;
+  text-align: center;
+  h2 {
+    color: $color-blue;
+  }
+  p {
+    max-width: 70rem;
+    margin: auto;
+  }
+  .aboutCompany {
+    &__logos {
+      @include alignCenter;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+  }
+}
+
+.section-someFacts {
+  // @include alignCenter;
+  // justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  @include respond(tab-phone) {
+    grid-template-columns: 1fr;
+  }
+  gap: 24px;
+  background-color: $color-grey-9;
+  padding: 48px;
+  border-radius: 5px;
+
+  .someFacts {
+    &__fact {
+      @include alignCenter;
+      flex-direction: column;
+      gap: 16px;
+      text-align: center;
+      color: $color-blue;
+
+      h4 {
+        color: $color-blue;
+      }
+      p {
+        color: $color-grey-5;
+      }
+      i {
+        font-size: 32px;
+      }
+    }
+  }
+}
+
+.section-faq {
+  h3 {
+    color: $color-grey-5;
+    font-weight: 700;
+  }
+}
