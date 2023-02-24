@@ -1,88 +1,57 @@
 .footer {
-  background: $color-primary-light-2;
-  border-radius: 2.4rem;
-  display: flex;
-  flex-direction: column;
-  gap: 5.2rem;
-  padding: 4rem;
-  margin: 8rem 5.2rem 4.6rem 5.2rem;
-  font-size: 18px;
-  line-height: 23px;
-  @include respond(small-desktop) {
-    margin: 6.4rem 2.4rem;
-  }
-  @include respond(tab-port) {
-    margin: 64px 2.4rem 44px 2.4rem;
-    gap: 32px;
-    padding: 24px;
-  }
+  margin-top: 64px;
+  color: $color-grey--light;
   @include respond(phone) {
-    gap: 24px;
+    margin-top: 32px;
   }
-  @include respond(phone-small) {
-    margin: 40px 2.4rem 24px 2.4rem;
-  }
-  &__up,
-  &__down {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 24px;
-    flex-wrap: wrap;
-  }
-
-  @include respond(phone) {
-    &__up {
-      gap: 20px;
+  &__top {
+    width: 100%;
+    background-color: $color-grey-5;
+    padding: 4.2rem 0;
+    & .container {
+      display: grid;
+      grid-template-columns: 1.5fr repeat(3, 1fr);
+      @include respond(tab-phone) {
+        grid-template-columns: 1fr 1fr;
+        row-gap: 42px;
+      }
+      @include respond(phone) {
+        grid-template-columns: 1fr;
+        row-gap: 28px;
+      }
     }
   }
+  &__bottom {
+    padding: 2.4rem 0;
 
-  .header__logo-box {
-    &:hover svg {
-      &.logo-orange {
-        top: 5px;
-        left: -2px;
-      }
-      &.logo-red {
-        top: -2px;
-        left: 9px;
-      }
-      &.logo-blue {
-        top: 19px;
-        left: 15px;
-      }
-      &.logo-green {
-        top: 21px;
-      }
-
-      &.logo-red {
-        top: 2.9px;
-        left: 11.4px;
-        transform: rotate(28deg);
-      }
-    }
+    width: 100%;
+    background-color: #0c0c0c;
   }
 
   &__list {
     list-style: none;
-    width: auto;
-    gap: 32px;
-    row-gap: 12px;
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    &--privacy {
-      max-width: 47.9rem;
+    flex-direction: column;
+    gap: 16px;
+    & h4 {
+      color: $color-white;
     }
-    @include respond(phone) {
-      justify-content: unset;
+  }
+
+  &_item {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    & strong {
+      font-weight: 700;
+      color: $color-white;
     }
   }
 
   &__link {
     &:link,
     &:visited {
+      line-height: 18px;
       display: inline-block;
       color: inherit;
       text-decoration: none;
@@ -90,11 +59,26 @@
     }
     &:hover,
     &:active {
-      color: $color-primary-light-1;
+      color: $color-grey;
     }
   }
 
-  &__copyright {
-    color: $color-primary-light-1;
+  &__socials {
+    @include alignCenter;
+    gap: 12px;
+    & a {
+      text-decoration: none;
+      color: inherit;
+
+      &:hover {
+        & i {
+          transform: scale(1.1);
+        }
+      }
+    }
+    & i {
+      font-size: 24px;
+      transition: all 0.2s;
+    }
   }
 }

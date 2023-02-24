@@ -17,25 +17,28 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-
-    <link rel="stylesheet" href="assets/css/style.css" />
     <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <!-- <link
       rel="icon"
       type="image/svg"
       sizes="16x16"
       href="./assets/imgs/newlogoCluster.svg"
-    />
+    /> -->
   </head>
   <body>
     <header class="header" id="header">
       <aside class="header__top">
-        <a class="heading-tertiary">
+        <a href="#" class="heading-tertiary">
           THE 2023 POSTING DEADLINE HAS PASSED! 2023 STATE & FEDERAL LABOR LAW
           POSTERS AVAILABLE NOW.
         </a>
       </aside>
       <div class="header__content container">
-        <nav class="header__content--nav">
+        <nav class="header__content--nav tablet-hidden">
           <aside class="header__phone-number sub-heading">
             <span>Toll Free: </span>
             <a href="tel:1-800-745-9970">1-800-745-9970</a>
@@ -62,32 +65,101 @@
         </nav>
         <div class="header__content--content">
           <div class="header__logo">
-            <img src="./assets/imgs/logo.png" alt="Website Logo" />
+            <img
+              src="./assets/imgs/logo.png"
+              alt="Website Logo"
+              class="tablet-hidden"
+            />
+            <button
+              class="open-btn tablet-show"
+              onclick="addActive('mobile-nav')"
+            >
+              <i class="fas fa-bars"></i>
+            </button>
           </div>
           <div class="header__search">
             <input type="text" placeholder="Search..." />
-            <span class="icon"></span>
+            <span class="icon">
+              <i class="fas fa-search"></i>
+            </span>
           </div>
-          <div>cart</div>
+          <button class="btn__cart">
+            <i class="fas fa-cart-shopping"></i>
+          </button>
         </div>
       </div>
-      <nav class="header__nav">
+      <nav class="header__nav tablet-hidden">
         <ul class="header__list container">
           <li class="header__item header__browse">
             <a href="#" class="header__link">
               Browse Categories
               <i class="fas fa-chevron-down"></i>
             </a>
-            <ul class="header__submenu">
+            <ul class="header__submenu desktop">
               <li class="header__submenu--item header__browse">
                 <a href="#" class="header__submenu--link">
                   2023 Labor Law Posters
                   <i class="fas fa-chevron-right"></i>
                 </a>
-                <ul class="header__submenu x2">
-                  <li class="header__submenu--item header__browse">
+                <ul class="header__submenu x2 desktop">
+                  <li class="header__submenu--item">
                     <a href="#" class="header__submenu--link">
-                      2023 Labor Law Posters
+                      Complete Labor Law Poster
+                    </a>
+                  </li>
+                  <li class="header__submenu--item">
+                    <a href="#" class="header__submenu--link">
+                      Digital Labor Law Poster
+                    </a>
+                  </li>
+                  <li class="header__submenu--item">
+                    <a href="#" class="header__submenu--link">
+                      Labor Law Poster with Automatic Updates
+                    </a>
+                  </li>
+                  <li class="header__submenu--item">
+                    <a href="#" class="header__submenu--link">
+                      City & County Labor Law Posters
+                    </a>
+                  </li>
+                  <li class="header__submenu--item">
+                    <a href="#" class="header__submenu--link">
+                      COVID Workplace Safety Posters
+                    </a>
+                  </li>
+                  <li class="header__submenu--item">
+                    <a href="#" class="header__submenu--link">
+                      Federal Labor Law Posters
+                    </a>
+                  </li>
+                  <li class="header__submenu--item">
+                    <a href="#" class="header__submenu--link">
+                      Federal Contractor Poster
+                    </a>
+                  </li>
+                  <li class="header__submenu--item">
+                    <a href="#" class="header__submenu--link">
+                      Human Trafficking Posters
+                    </a>
+                  </li>
+                  <li class="header__submenu--item">
+                    <a href="#" class="header__submenu--link">
+                      Remote Worker Labor Law Posters
+                    </a>
+                  </li>
+                  <li class="header__submenu--item">
+                    <a href="#" class="header__submenu--link">
+                      Labor Law Posters by Business Type
+                    </a>
+                  </li>
+                  <li class="header__submenu--item">
+                    <a href="#" class="header__submenu--link">
+                      Poster Clips/Accessories
+                    </a>
+                  </li>
+                  <li class="header__submenu--item">
+                    <a href="#" class="header__submenu--link">
+                      See All Employment Law Products
                     </a>
                   </li>
                 </ul>
@@ -97,36 +169,217 @@
                   OSHA Compliance Products
                   <i class="fas fa-chevron-right"></i>
                 </a>
+                <ul class="header__submenu x2 desktop">
+                  <li class="header__submenu--item">
+                    <a href="#" class="header__submenu--link">
+                      Confidential OSHA Employee Folder
+                    </a>
+                  </li>
+                  <li class="header__submenu--item">
+                    <a href="#" class="header__submenu--link">
+                      Confined Spaces & Lockout-Tagout
+                    </a>
+                  </li>
+                  <li class="header__submenu--item">
+                    <a href="#" class="header__submenu--link">
+                      Forklift Safety Products
+                    </a>
+                  </li>
+                  <li class="header__submenu--item">
+                    <a href="#" class="header__submenu--link">
+                      No Smoking Posters & Signs
+                    </a>
+                  </li>
+                  <li class="header__submenu--item">
+                    <a href="#" class="header__submenu--link">
+                      State Workers' Compensation Forms
+                    </a>
+                  </li>
+                  <li class="header__submenu--item">
+                    <a href="#" class="header__submenu--link">
+                      Right to Know Poster
+                    </a>
+                  </li>
+                  <li class="header__submenu--item">
+                    <a href="#" class="header__submenu--link">
+                      OSHA 301 Recordkeeping Products
+                    </a>
+                  </li>
+                  <li class="header__submenu--item">
+                    <a href="#" class="header__submenu--link">
+                      OSHA Safety Workplace Posters
+                    </a>
+                  </li>
+                  <li class="header__submenu--item">
+                    <a href="#" class="header__submenu--link">
+                      COVID Workplace Safety Posters
+                    </a>
+                  </li>
+                </ul>
               </li>
               <li class="header__submenu--item header__browse">
                 <a href="#" class="header__submenu--link">
                   Attendance Management
                   <i class="fas fa-chevron-right"></i>
                 </a>
+
+                <ul class="header__submenu x2 desktop">
+                  <li class="header__submenu--item">
+                    <a href="#" class="header__submenu--link">
+                      Employee Attendance Tracker
+                    </a>
+                  </li>
+                  <li class="header__submenu--item">
+                    <a href="#" class="header__submenu--link">
+                      Employee Attendance Calendar
+                    </a>
+                  </li>
+                </ul>
               </li>
               <li class="header__submenu--item header__browse">
                 <a href="#" class="header__submenu--link">
                   Pre-Employment and Hiring
                   <i class="fas fa-chevron-right"></i>
                 </a>
+
+                <ul class="header__submenu x2 desktop">
+                  <li class="header__submenu--item">
+                    <a href="#" class="header__submenu--link">
+                      Interviewing & Pre-Employment
+                    </a>
+                  </li>
+                  <li class="header__submenu--item">
+                    <a href="#" class="header__submenu--link">
+                      Hiring & Orientation
+                    </a>
+                  </li>
+                  <li class="header__submenu--item">
+                    <a href="#" class="header__submenu--link">
+                      Employment Folders
+                    </a>
+                  </li>
+                </ul>
               </li>
               <li class="header__submenu--item header__browse">
                 <a href="#" class="header__submenu--link">
                   HR Recordkeeping
                   <i class="fas fa-chevron-right"></i>
                 </a>
+
+                <ul class="header__submenu x2 desktop">
+                  <li class="header__submenu--item">
+                    <a href="#" class="header__submenu--link">
+                      Employee Record & Payroll Forms
+                    </a>
+                  </li>
+                  <li class="header__submenu--item">
+                    <a href="#" class="header__submenu--link">
+                      Employee Record Folders
+                    </a>
+                  </li>
+                  <li class="header__submenu--item">
+                    <a href="#" class="header__submenu--link">
+                      Medical, Disability, and Accommodations
+                    </a>
+                  </li>
+                  <li class="header__submenu--item">
+                    <a href="#" class="header__submenu--link">
+                      Sexual Harassment Forms
+                    </a>
+                  </li>
+                </ul>
               </li>
               <li class="header__submenu--item header__browse">
                 <a href="#" class="header__submenu--link">
                   Performance and Separation
                   <i class="fas fa-chevron-right"></i>
                 </a>
+                <ul class="header__submenu x2 desktop">
+                  <li class="header__submenu--item">
+                    <a href="#" class="header__submenu--link">
+                      Employee Disciplinary Warning Forms
+                    </a>
+                  </li>
+                  <li class="header__submenu--item">
+                    <a href="#" class="header__submenu--link">
+                      Performance Evauation Forms
+                    </a>
+                  </li>
+                  <li class="header__submenu--item">
+                    <a href="#" class="header__submenu--link">
+                      Separation & Termination Forms
+                    </a>
+                  </li>
+                </ul>
               </li>
               <li class="header__submenu--item header__browse">
                 <a href="#" class="header__submenu--link">
                   Workplace Safety Posters & Signs
                   <i class="fas fa-chevron-right"></i>
                 </a>
+
+                <ul class="header__submenu x2 desktop">
+                  <li class="header__submenu--item">
+                    <a href="#" class="header__submenu--link">
+                      Caution Signs
+                    </a>
+                  </li>
+                  <li class="header__submenu--item">
+                    <a href="#" class="header__submenu--link">
+                      Chemicals & Hazardous Materials Signs
+                    </a>
+                  </li>
+                  <li class="header__submenu--item">
+                    <a href="#" class="header__submenu--link">
+                      Confined Space Signs
+                    </a>
+                  </li>
+                  <li class="header__submenu--item">
+                    <a href="#" class="header__submenu--link">
+                      Construction Signs
+                    </a>
+                  </li>
+                  <li class="header__submenu--item">
+                    <a href="#" class="header__submenu--link">
+                      Electrical Safety Signs
+                    </a>
+                  </li>
+                  <li class="header__submenu--item">
+                    <a href="#" class="header__submenu--link">
+                      Fire & Emergency Signs
+                    </a>
+                  </li>
+                  <li class="header__submenu--item">
+                    <a href="#" class="header__submenu--link">
+                      First Aid Signs
+                    </a>
+                  </li>
+                  <li class="header__submenu--item">
+                    <a href="#" class="header__submenu--link">
+                      No Smoking Signs
+                    </a>
+                  </li>
+                  <li class="header__submenu--item">
+                    <a href="#" class="header__submenu--link">
+                      NFPA Placards & Kits
+                    </a>
+                  </li>
+                  <li class="header__submenu--item">
+                    <a href="#" class="header__submenu--link">
+                      Safety Signs and Placards
+                    </a>
+                  </li>
+                  <li class="header__submenu--item">
+                    <a href="#" class="header__submenu--link">
+                      Restroom and Housekeeping Signs
+                    </a>
+                  </li>
+                  <li class="header__submenu--item">
+                    <a href="#" class="header__submenu--link">
+                      COVID Workplace Safety Posters
+                    </a>
+                  </li>
+                </ul>
               </li>
               <li class="header__submenu--item">
                 <a href="#" class="header__submenu--link"> See All Products </a>
@@ -147,7 +400,884 @@
           </li>
         </ul>
       </nav>
+      <nav class="header__mobile--nav" id="mobile-nav">
+        <header class="header__mobile--header">
+          <div class="header__mobile--btns">
+            <button
+              class="btn btn__mobile-header"
+              id="menu"
+              onclick="addActive('first'), removeActive('second')"
+            >
+              Menu
+            </button>
+            <button
+              class="btn btn__mobile-header"
+              id="account"
+              onclick="removeActive('first'), addActive('second')"
+            >
+              Account
+            </button>
+          </div>
+          <button class="close-btn" onclick="removeActive('mobile-nav')">
+            <i class="fas fa-times"></i>
+          </button>
+        </header>
+        <div class="header__mobile--list first active" id="first">
+          <nav class="header__nav mobile">
+            <ul class="header__list container mobile">
+              <li class="header__item header__browse mobile">
+                <div class="drop-down__before-box header__link mobile">
+                  Browse Categories
+                  <i class="fas fa-chevron-down"></i>
+                </div>
+                <ul class="drop-down__hidden-box header__submenu">
+                  <li class="header__submenu--item header__browse">
+                    <a href="#" class="header__submenu--link">
+                      2023 Labor Law Posters
+                    </a>
+                    <ul class="header__submenu x2">
+                      <li class="header__submenu--item">
+                        <a href="#" class="header__submenu--link">
+                          Complete Labor Law Poster
+                        </a>
+                      </li>
+                      <li class="header__submenu--item">
+                        <a href="#" class="header__submenu--link">
+                          Digital Labor Law Poster
+                        </a>
+                      </li>
+                      <li class="header__submenu--item">
+                        <a href="#" class="header__submenu--link">
+                          Labor Law Poster with Automatic Updates
+                        </a>
+                      </li>
+                      <li class="header__submenu--item">
+                        <a href="#" class="header__submenu--link">
+                          City & County Labor Law Posters
+                        </a>
+                      </li>
+                      <li class="header__submenu--item">
+                        <a href="#" class="header__submenu--link">
+                          COVID Workplace Safety Posters
+                        </a>
+                      </li>
+                      <li class="header__submenu--item">
+                        <a href="#" class="header__submenu--link">
+                          Federal Labor Law Posters
+                        </a>
+                      </li>
+                      <li class="header__submenu--item">
+                        <a href="#" class="header__submenu--link">
+                          Federal Contractor Poster
+                        </a>
+                      </li>
+                      <li class="header__submenu--item">
+                        <a href="#" class="header__submenu--link">
+                          Human Trafficking Posters
+                        </a>
+                      </li>
+                      <li class="header__submenu--item">
+                        <a href="#" class="header__submenu--link">
+                          Remote Worker Labor Law Posters
+                        </a>
+                      </li>
+                      <li class="header__submenu--item">
+                        <a href="#" class="header__submenu--link">
+                          Labor Law Posters by Business Type
+                        </a>
+                      </li>
+                      <li class="header__submenu--item">
+                        <a href="#" class="header__submenu--link">
+                          Poster Clips/Accessories
+                        </a>
+                      </li>
+                      <li class="header__submenu--item">
+                        <a href="#" class="header__submenu--link">
+                          See All Employment Law Products
+                        </a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="header__submenu--item header__browse">
+                    <a href="#" class="header__submenu--link">
+                      OSHA Compliance Products
+                    </a>
+                    <ul class="header__submenu x2">
+                      <li class="header__submenu--item">
+                        <a href="#" class="header__submenu--link">
+                          Confidential OSHA Employee Folder
+                        </a>
+                      </li>
+                      <li class="header__submenu--item">
+                        <a href="#" class="header__submenu--link">
+                          Confined Spaces & Lockout-Tagout
+                        </a>
+                      </li>
+                      <li class="header__submenu--item">
+                        <a href="#" class="header__submenu--link">
+                          Forklift Safety Products
+                        </a>
+                      </li>
+                      <li class="header__submenu--item">
+                        <a href="#" class="header__submenu--link">
+                          No Smoking Posters & Signs
+                        </a>
+                      </li>
+                      <li class="header__submenu--item">
+                        <a href="#" class="header__submenu--link">
+                          State Workers' Compensation Forms
+                        </a>
+                      </li>
+                      <li class="header__submenu--item">
+                        <a href="#" class="header__submenu--link">
+                          Right to Know Poster
+                        </a>
+                      </li>
+                      <li class="header__submenu--item">
+                        <a href="#" class="header__submenu--link">
+                          OSHA 301 Recordkeeping Products
+                        </a>
+                      </li>
+                      <li class="header__submenu--item">
+                        <a href="#" class="header__submenu--link">
+                          OSHA Safety Workplace Posters
+                        </a>
+                      </li>
+                      <li class="header__submenu--item">
+                        <a href="#" class="header__submenu--link">
+                          COVID Workplace Safety Posters
+                        </a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="header__submenu--item header__browse">
+                    <a href="#" class="header__submenu--link">
+                      Attendance Management
+                    </a>
+
+                    <ul class="header__submenu x2">
+                      <li class="header__submenu--item">
+                        <a href="#" class="header__submenu--link">
+                          Employee Attendance Tracker
+                        </a>
+                      </li>
+                      <li class="header__submenu--item">
+                        <a href="#" class="header__submenu--link">
+                          Employee Attendance Calendar
+                        </a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="header__submenu--item header__browse">
+                    <a href="#" class="header__submenu--link">
+                      Pre-Employment and Hiring
+                      <i class="fas fa-chevron-right"></i>
+                    </a>
+
+                    <ul class="header__submenu x2">
+                      <li class="header__submenu--item">
+                        <a href="#" class="header__submenu--link">
+                          Interviewing & Pre-Employment
+                        </a>
+                      </li>
+                      <li class="header__submenu--item">
+                        <a href="#" class="header__submenu--link">
+                          Hiring & Orientation
+                        </a>
+                      </li>
+                      <li class="header__submenu--item">
+                        <a href="#" class="header__submenu--link">
+                          Employment Folders
+                        </a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="header__submenu--item header__browse">
+                    <a href="#" class="header__submenu--link">
+                      HR Recordkeeping
+                    </a>
+
+                    <ul class="header__submenu x2">
+                      <li class="header__submenu--item">
+                        <a href="#" class="header__submenu--link">
+                          Employee Record & Payroll Forms
+                        </a>
+                      </li>
+                      <li class="header__submenu--item">
+                        <a href="#" class="header__submenu--link">
+                          Employee Record Folders
+                        </a>
+                      </li>
+                      <li class="header__submenu--item">
+                        <a href="#" class="header__submenu--link">
+                          Medical, Disability, and Accommodations
+                        </a>
+                      </li>
+                      <li class="header__submenu--item">
+                        <a href="#" class="header__submenu--link">
+                          Sexual Harassment Forms
+                        </a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="header__submenu--item header__browse">
+                    <a href="#" class="header__submenu--link">
+                      Performance and Separation
+                    </a>
+                    <ul class="header__submenu x2">
+                      <li class="header__submenu--item">
+                        <a href="#" class="header__submenu--link">
+                          Employee Disciplinary Warning Forms
+                        </a>
+                      </li>
+                      <li class="header__submenu--item">
+                        <a href="#" class="header__submenu--link">
+                          Performance Evauation Forms
+                        </a>
+                      </li>
+                      <li class="header__submenu--item">
+                        <a href="#" class="header__submenu--link">
+                          Separation & Termination Forms
+                        </a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="header__submenu--item header__browse">
+                    <a href="#" class="header__submenu--link">
+                      Workplace Safety Posters & Signs
+                    </a>
+
+                    <ul class="header__submenu x2">
+                      <li class="header__submenu--item">
+                        <a href="#" class="header__submenu--link">
+                          Caution Signs
+                        </a>
+                      </li>
+                      <li class="header__submenu--item">
+                        <a href="#" class="header__submenu--link">
+                          Chemicals & Hazardous Materials Signs
+                        </a>
+                      </li>
+                      <li class="header__submenu--item">
+                        <a href="#" class="header__submenu--link">
+                          Confined Space Signs
+                        </a>
+                      </li>
+                      <li class="header__submenu--item">
+                        <a href="#" class="header__submenu--link">
+                          Construction Signs
+                        </a>
+                      </li>
+                      <li class="header__submenu--item">
+                        <a href="#" class="header__submenu--link">
+                          Electrical Safety Signs
+                        </a>
+                      </li>
+                      <li class="header__submenu--item">
+                        <a href="#" class="header__submenu--link">
+                          Fire & Emergency Signs
+                        </a>
+                      </li>
+                      <li class="header__submenu--item">
+                        <a href="#" class="header__submenu--link">
+                          First Aid Signs
+                        </a>
+                      </li>
+                      <li class="header__submenu--item">
+                        <a href="#" class="header__submenu--link">
+                          No Smoking Signs
+                        </a>
+                      </li>
+                      <li class="header__submenu--item">
+                        <a href="#" class="header__submenu--link">
+                          NFPA Placards & Kits
+                        </a>
+                      </li>
+                      <li class="header__submenu--item">
+                        <a href="#" class="header__submenu--link">
+                          Safety Signs and Placards
+                        </a>
+                      </li>
+                      <li class="header__submenu--item">
+                        <a href="#" class="header__submenu--link">
+                          Restroom and Housekeeping Signs
+                        </a>
+                      </li>
+                      <li class="header__submenu--item">
+                        <a href="#" class="header__submenu--link">
+                          COVID Workplace Safety Posters
+                        </a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="header__submenu--item">
+                    <a href="#" class="header__submenu--link">
+                      See All Products
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <li class="header__item">
+                <a href="#" class="header__link">Labor Law Posters</a>
+              </li>
+              <li class="header__item">
+                <a href="#" class="header__link">Poster Replacement Service</a>
+              </li>
+              <li class="header__item">
+                <a href="#" class="header__link">Corporate Solutions</a>
+              </li>
+              <li class="header__item">
+                <a href="#" class="header__link">Labor Law Poster Updates</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <div class="header__mobile--list second" id="second">
+          <nav class="header__content--nav mobile">
+            <aside class="header__phone-number sub-heading">
+              <span>Toll Free: </span>
+              <a href="tel:1-800-745-9970">1-800-745-9970</a>
+            </aside>
+            <ul class="header__content--list mobile">
+              <li>
+                <a href="#" class="header__content--link">Sign In / Register</a>
+              </li>
+              <li>
+                <a href="#" class="header__content--link">Customer Support</a>
+              </li>
+              <li>
+                <a href="#" class="header__content--link">
+                  Guaranteed Compliance
+                </a>
+              </li>
+              <li>
+                <a href="#" class="header__content--link">
+                  Create an Account
+                </a>
+              </li>
+              <li>
+                <a href="#" class="header__content--link">My Products </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </nav>
     </header>
+    <main class="container" id="main">
+      <section class="section-widget-setState u-margin-top-medium">
+        <div class="setState__left">
+          <img
+            src="./assets/imgs/widget-img.png"
+            alt="Law labor posters"
+            class="img"
+          />
+        </div>
+        <div class="setState__right">
+          <h2 class="heading-secondary">THOUSANDS OF BUSINESSES</h2>
+          <h4 class="heading-primary--sub u-margin-bottom-smallest">
+            trust LaborLawCenter® to keep them in compliance.
+          </h4>
+          <p class="setState__quote u-margin-bottom-smallest-2">
+            "Large or small, we help them all."
+          </p>
+          <h3 class="heading-tertiary u-margin-bottom-smallest-2">
+            2023 Labor Law Posters Are Now Shipping!
+          </h3>
+          <p class="setState__p u-margin-bottom-smallest-2">
+            Our high quality laminated Labor Law Posters meet compliance
+            requirements for all businesses.
+          </p>
+          <form
+            action=""
+            method="post"
+            name="choose_poster"
+            class="choose-city-poster u-margin-bottom-smallest-2"
+          >
+            <div id="con-349j">
+              <select
+                onchange="location.href=(this.options[this.selectedIndex].value)"
+                name="selected_labour"
+                id="selected_labour"
+              >
+                <option selected="selected">Select Your State</option>
+                <option value="alabama-labor-law-posters">Alabama</option>
+                <option value="alaska-labor-law-posters">Alaska</option>
+                <option value="arizona-labor-law-posters">Arizona</option>
+                <option value="arkansas-labor-law-posters">Arkansas</option>
+                <option value="california-labor-law-posters">California</option>
+                <option value="colorado-labor-law-posters">Colorado</option>
+                <option value="connecticut-labor-law-posters">
+                  Connecticut
+                </option>
+                <option value="delaware-labor-law-posters">Delaware</option>
+                <option value="district-of-columbia-labor-law-posters">
+                  District of Columbia
+                </option>
+                <option value="florida-labor-law-posters">Florida</option>
+                <option value="georgia-labor-law-posters">Georgia</option>
+                <option value="hawaii-labor-law-posters">Hawaii</option>
+                <option value="idaho-labor-law-posters">Idaho</option>
+                <option value="illinois-labor-law-poster">Illinois</option>
+                <option value="indiana-labor-law-posters">Indiana</option>
+                <option value="iowa-labor-law-posters">Iowa</option>
+                <option value="kansas-labor-law-posters">Kansas</option>
+                <option value="kentucky-labor-law-posters">Kentucky</option>
+                <option value="louisiana-labor-law-posters">Louisiana</option>
+                <option value="maine-labor-law-posters">Maine</option>
+                <option value="maryland-labor-law-posters">Maryland</option>
+                <option value="massachusetts-labor-law-posters">
+                  Massachusetts
+                </option>
+                <option value="michigan-labor-law-posters">Michigan</option>
+                <option value="minnesota-labor-law-posters">Minnesota</option>
+                <option value="mississippi-labor-law-posters">
+                  Mississippi
+                </option>
+                <option value="missouri-labor-law-posters">Missouri</option>
+                <option value="montana-labor-law-posters">Montana</option>
+                <option value="nebraska-labor-law-posters">Nebraska</option>
+                <option value="nevada-labor-law-posters">Nevada</option>
+                <option value="new-hampshire-labor-law-posters">
+                  New Hampshire
+                </option>
+                <option value="new-jersey-labor-law-posters">New Jersey</option>
+                <option value="new-mexico-labor-law-posters">New Mexico</option>
+                <option value="new-york-labor-law-posters">New York</option>
+                <option value="north-carolina-labor-law-posters">
+                  North Carolina
+                </option>
+                <option value="north-dakota-labor-law-posters">
+                  North Dakota
+                </option>
+                <option value="ohio-labor-law-posters">Ohio</option>
+                <option value="oklahoma-labor-law-posters">Oklahoma</option>
+                <option value="oregon-labor-law-posters">Oregon</option>
+                <option value="pennsylvania-labor-law-posters">
+                  Pennsylvania
+                </option>
+                <option value="puerto-rico-labor-law-posters">
+                  Puerto Rico
+                </option>
+                <option value="rhode-island-labor-law-posters">
+                  Rhode Island
+                </option>
+                <option value="south-carolina-labor-law-posters">
+                  South Carolina
+                </option>
+                <option value="south-dakota-labor-law-posters">
+                  South Dakota
+                </option>
+                <option value="tennessee-labor-law-posters">Tennessee</option>
+                <option value="texas-labor-law-posters">Texas</option>
+                <option value="utah-labor-law-posters">Utah</option>
+                <option value="vermont-labor-law-posters">Vermont</option>
+                <option value="virginia-labor-law-posters">Virginia</option>
+                <option value="washington-labor-law-posters">Washington</option>
+                <option value="west-virginia-labor-law-posters">
+                  West Virginia
+                </option>
+                <option value="wisconsin-labor-law-posters">Wisconsin</option>
+                <option value="wyoming-labor-law-posters">Wyoming</option>
+              </select>
+            </div>
+          </form>
+          <p class="setState__red-p">
+            All 2023 Labor Law Posters will include the mandatory federal EEOC
+            update. Know your rights: Workplace Discrimination is illegal
+          </p>
+        </div>
+      </section>
+      <section class="section-benefits u-margin-top-medium">
+        <div class="benefits__benefit">
+          <i class="fas fa-truck-fast"></i>
+          <h4 class="heading-primary--sub">FAST SHIPPING</h4>
+        </div>
+        <div class="benefits__benefit">
+          <i class="fa-light fa-dollar-sign"></i>
+          <h4 class="heading-primary--sub">MONEY BACK GUARANTEE</h4>
+        </div>
+        <div class="benefits__benefit">
+          <!-- <i class="fas fa-envelope"></i> -->
+          <i class="fa-regular fa-envelope"></i>
+          <h4 class="heading-primary--sub">ONLINE SUPPORT AVAILABLE</h4>
+        </div>
+      </section>
+      <section class="section-clients u-margin-top-medium">
+        <div class="swiper">
+          <!-- Additional required wrapper -->
+          <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide">
+              <img src="assets/imgs/charter.png" alt="" />
+            </div>
+            <div class="swiper-slide">
+              <img src="assets/imgs/chevron.png" alt="" />
+            </div>
+            <div class="swiper-slide">
+              <img src="assets/imgs/criek.png" alt="" />
+            </div>
+            <div class="swiper-slide">
+              <img src="assets/imgs/equifax.png" alt="" />
+            </div>
+            <div class="swiper-slide">
+              <img src="assets/imgs/google.png" alt="" />
+            </div>
+            <div class="swiper-slide">
+              <img src="assets/imgs/seven.png" alt="" />
+            </div>
+            <div class="swiper-slide">
+              <img src="assets/imgs/tacobell.png" alt="" />
+            </div>
+          </div>
+
+          <!-- If we need navigation buttons -->
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+        </div>
+      </section>
+      <section class="section-reviews u-margin-top-medium">
+        <div class="reviews__review card__blue">
+          <p class="reviews__text">
+            "Your labor law posters are exceptional. I never have to worry that
+            something is missing"
+          </p>
+          <p class="reviews__author">—Mary-Lee, NY Accounting</p>
+        </div>
+        <div class="reviews__review card__blue">
+          <p class="reviews__text">
+            "I purchase the state and federal poster for all my stores. This is
+            the reason that I keep coming back. One posting, great pricing and
+            speedy delivery....and always helpful when calling. "
+          </p>
+          <p class="reviews__author">—Linda, Multiple locations</p>
+        </div>
+        <div class="reviews__review card__blue">
+          <p class="reviews__text">
+            "Your labor law posters are exceptional. I never have to worry that
+            something is missing"
+          </p>
+          <p class="reviews__author">—Chris, CA Electronics</p>
+        </div>
+        <a href="#" class="btn btn__yellow"
+          >See what our customers are saying about us ></a
+        >
+      </section>
+      <section class="section-consider u-margin-top-medium">
+        <div class="considers__consider">
+          <div class="consider__consider--card">
+            <h4 class="heading-primary--sub u-margin-bottom-smallest-2">
+              NOT SURE WHAT YOU NEED?
+            </h4>
+            <p class="heading-primary--sub">
+              Simply answer a few questions. Try our labor law poster advisor.
+            </p>
+            <img src="assets/imgs/consider-1.png" alt="Consider" />
+          </div>
+          <a href="#" class="btn btn__yellow"> TRY IT OUT! </a>
+        </div>
+        <div class="considers__consider">
+          <div class="consider__consider--card">
+            <h4 class="heading-primary--sub u-margin-bottom-smallest-2">
+              DIGITAL LABOR LAW POSTERS
+            </h4>
+            <p class="heading-primary--sub">
+              Flexible solutions for the modern workplace and remote employees.
+            </p>
+            <img src="assets/imgs/consider-2.png" alt="Consider" />
+          </div>
+          <a href="#" class="btn btn__yellow"> SHOP DIGITAL POSTERS </a>
+        </div>
+        <div class="considers__consider">
+          <div class="consider__consider--card">
+            <h4 class="heading-primary--sub u-margin-bottom-smallest-2">
+              COVID-19 SAFETY POSTERS
+            </h4>
+            <p class="heading-primary--sub">
+              CDC recommended posters for workplace safety and health.
+            </p>
+            <img src="assets/imgs/consider-3.png" alt="Consider" />
+          </div>
+          <a href="#" class="btn btn__yellow"> SHOP POSTERS </a>
+        </div>
+      </section>
+      <section class="section-updates u-margin-top-medium">
+        <div class="updates__left">
+          <h4 class="updates__heading">
+            CHECK TO SEE IF YOUR POSTERS ARE UP TO DATE
+          </h4>
+          <img
+            src="assets/imgs/COMPLIANT.png"
+            alt="CHECK TO SEE IF YOUR POSTERS ARE UP TO DATE"
+            class="img"
+          />
+          <div class="updates__btns">
+            <button class="btn btn__yellow">CHECK BY RECENT UPDATE</button>
+            <button class="btn btn__yellow">CHECK BY COMPLIANCE CODE</button>
+          </div>
+        </div>
+        <div class="updates__right">
+          <p class="updates__head">Recent Labor Law Poster Updates</p>
+          <div class="updates__posts u-margin-bottom-smallest">
+            <div class="updates__post">
+              <h4 class="updates__post--title">
+                *10/2022: 2023 Labor Law Poster Updates
+              </h4>
+              <p class="updates__post--text">
+                What Every Business Needs to Know about 2023 Labor Law Poster
+                Compliance
+              </p>
+            </div>
+            <div class="updates__post">
+              <h4 class="updates__post--title">
+                *10/2022: 2023 Labor Law Poster Updates
+              </h4>
+              <p class="updates__post--text">
+                What Every Business Needs to Know about 2023 Labor Law Poster
+                Compliance
+              </p>
+            </div>
+            <div class="updates__post">
+              <h4 class="updates__post--title">
+                *10/2022: 2023 Labor Law Poster Updates
+              </h4>
+              <p class="updates__post--text">
+                What Every Business Needs to Know about 2023 Labor Law Poster
+                Compliance
+              </p>
+            </div>
+            <div class="updates__post">
+              <h4 class="updates__post--title">
+                *10/2022: 2023 Labor Law Poster Updates
+              </h4>
+              <p class="updates__post--text">
+                What Every Business Needs to Know about 2023 Labor Law Poster
+                Compliance
+              </p>
+            </div>
+          </div>
+          <a href="#" class="updates__posts--seeAll">See All Recent Updates</a>
+        </div>
+      </section>
+      <section class="section-consider u-margin-top-big must-considers">
+        <div class="considers__consider">
+          <div class="consider__consider--card">
+            <h4 class="heading-primary--sub u-margin-bottom-smallest-2">
+              COMPLIANCE IS AS EASY AS 3-2-1!
+            </h4>
+            <p class="heading-primary--sub">
+              <span>ENTERPRISE LABOR LAW POSTER SOLUTIONS</span>
+            </p>
+            <img src="assets/imgs/compliance.png" alt="Consider" class="img" />
+          </div>
+          <a href="#" class="btn btn__yellow"> LEARN MORE </a>
+        </div>
+        <div class="considers__consider">
+          <div class="consider__consider--card">
+            <h4 class="heading-primary--sub u-margin-bottom-smallest-2">
+              STATE AND FEDERAL MINIMUM WAGE RATES
+            </h4>
+
+            <p class="heading-primary--sub">
+              <span>CHECK YOUR STATE’S CURRENT MINIMUM WAGE</span>
+            </p>
+            <img
+              src="assets/imgs/state-and-federal.png"
+              alt="Consider"
+              class="img"
+            />
+          </div>
+          <a href="#" class="btn btn__yellow"> VIEW MINIMUM WAGE RATES </a>
+        </div>
+        <div class="considers__consider">
+          <div class="consider__consider--card">
+            <h4 class="heading-primary--sub u-margin-bottom-smallest-2">
+              FEDERAL CONTRACTORS EDITION POSTER
+            </h4>
+            <p class="heading-primary--sub">
+              <span>PRE-ORDER THE 2023 VERSION NOW</span>
+            </p>
+            <img
+              src="assets/imgs/federal-constractors.png"
+              alt="Consider"
+              class="img"
+            />
+          </div>
+          <a href="#" class="btn btn__yellow"> BUY NOW </a>
+        </div>
+      </section>
+      <section class="section-about u-margin-top-medium">
+        <p class="about__heading u-margin-bottom-smallest-2">
+          Labor Law Center Is The Complete Solution To Your Compliance Needs
+        </p>
+        <div
+          class="about__text u-margin-bottom-smallest-2 card__blue card__blue--big"
+        >
+          Labor Law Center provides labor law posters and compliance services
+          from small, single location businesses to large, multiple location
+          corporations. Our
+          <strong>federal, state and OSHA labor law posters</strong> are
+          specifically designed to meet business needs and compliance
+          requirements. Whether your company buys individual posters to ship to
+          a single location or needs a year-round labor law poster service,
+          Labor Law Center has you covered. We also handle federal contractor
+          labor law poster requirements and industry-specific requirements.
+          <br /><br /><br />
+          Each labor law poster from Labor Law Center is backed by our 365-Day
+          Satisfaction Guarantee. Our Replacement Service for labor law posters
+          comes with an Unlimited Compliance Guarantee – meaning we pay all
+          posting fines, no matter the cost. With over 13 years in business,
+          we've never incurred a single labor law poster violation.
+          <br /><br /><br />
+          <strong>Toll Free: 1-800-745-9970 </strong> <br />This website
+          requires cookies to provide all of its features. For more information
+          on what data is contained in the cookies, please see our Privacy
+          Policy page. To accept cookies from this site, please click the Allow
+          button below.
+        </div>
+        <div class="about__trust">
+          <div class="about__trust--left">
+            <h1 class="heading-primary u-margin-bottom-smallest-2">
+              CONFIDENCE & QUALITY YOU CAN TRUST
+            </h1>
+            <p class="about__trust--text">
+              For close to 20 years, thousands of businesses have used
+              LaborLawCenter® to be in compliance with
+              <strong>State, Federal, and OSHA</strong>
+              labor law posters.
+              <br /><br />
+              With LaborLawCenter®, your satisfaction is
+              <strong>100% our priority and Guarantee!</strong>
+            </p>
+          </div>
+          <div class="about__trust--right">
+            <div class="about__trust--triangle"></div>
+            <img
+              src="assets/imgs/365-day-guarantee.png"
+              alt="365 Day Guarantee"
+            />
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer" id="footer">
+      <div class="footer__top">
+        <div class="container">
+          <ul class="footer__list">
+            <h4 class="heading-primary--sub u-margin-bottom-smallest">
+              Contact Information
+            </h4>
+            <li class="footer_item">
+              <strong>PHONE NUMBER</strong>
+              <a href="tel:800-745-9970" class="footer__link">800-745-9970</a>
+            </li>
+            <li class="footer_item">
+              <strong>EMAIL</strong>
+              <a href="email:800-745-9970" class="footer__link"
+                >Corporate@LaborLawCenter.com</a
+              >
+            </li>
+            <li class="footer_item">
+              <a href="#" class="footer__link">Ordering Info</a>
+            </li>
+            <li class="footer_item">
+              <a href="#" class="footer__link">Shipping Cost</a>
+            </li>
+            <li class="footer_item u-margin-bottom-smallest">
+              <a href="#" class="footer__link">Partners/Resellers</a>
+            </li>
+            <div class="footer__socials">
+              <a href="#"><i class="fa-brands fa-square-facebook"></i></a>
+              <a href="#"> <i class="fa-brands fa-square-twitter"></i></a>
+              <a href="#"><i class="fa-brands fa-square-instagram"></i></a>
+            </div>
+          </ul>
+          <ul class="footer__list">
+            <h4 class="heading-primary--sub u-margin-bottom-smallest">
+              Company Info
+            </h4>
+            <li class="footer_item">
+              <a href="#" class="footer__link">Contact us</a>
+            </li>
+            <li class="footer_item">
+              <a href="#" class="footer__link">About us</a>
+            </li>
+            <li class="footer_item">
+              <a href="#" class="footer__link">Value Added Services</a>
+            </li>
+            <li class="footer_item">
+              <a href="#" class="footer__link">Privacy Policy</a>
+            </li>
+            <li class="footer_item">
+              <a href="#" class="footer__link">Community</a>
+            </li>
+            <li class="footer_item">
+              <a href="#" class="footer__link">Press Room</a>
+            </li>
+          </ul>
+          <ul class="footer__list">
+            <h4 class="heading-primary--sub u-margin-bottom-smallest">
+              My Account
+            </h4>
+
+            <li class="footer_item">
+              <a href="#" class="footer__link">Sign In/Register</a>
+            </li>
+            <li class="footer_item">
+              <a href="#" class="footer__link">Edit Your Account</a>
+            </li>
+            <li class="footer_item">
+              <a href="#" class="footer__link">View Cart</a>
+            </li>
+            <li class="footer_item">
+              <a href="#" class="footer__link">Track Order</a>
+            </li>
+            <li class="footer_item">
+              <a href="#" class="footer__link">Returns Policy</a>
+            </li>
+          </ul>
+          <ul class="footer__list">
+            <h4 class="heading-primary--sub u-margin-bottom-smallest">
+              Tools & Resources
+            </h4>
+
+            <li class="footer_item">
+              <a href="#" class="footer__link">Labor Law Posters</a>
+            </li>
+            <li class="footer_item">
+              <a href="#" class="footer__link"
+                >Labor Law Poster Updates by State</a
+              >
+            </li>
+            <li class="footer_item">
+              <a href="#" class="footer__link"
+                >Free Printable Labor Law Posters</a
+              >
+            </li>
+            <li class="footer_item">
+              <a href="#" class="footer__link">Compliance Check</a>
+            </li>
+            <li class="footer_item">
+              <a href="#" class="footer__link">FAQ's</a>
+            </li>
+            <li class="footer_item">
+              <a href="#" class="footer__link">Labor Law Education Center</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <div class="container">
+          <p class="footer__copyright u-center-text">
+            © LaborLawCenter, Inc. <span class="year">2023</span>. All Rights
+            Reserved.
+          </p>
+          <div class="footer__icons">
+            <i class="fas fa-authorized"></i>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     <script src="assets/js/script.js"></script>
   </body>
 </html>
