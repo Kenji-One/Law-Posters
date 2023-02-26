@@ -1,0 +1,144 @@
+.law-poster {
+  #con-349j {
+    @include alignCenter;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .setState {
+    &__left {
+      display: block;
+      text-align: center;
+      img {
+        border-top-left-radius: 5px;
+        @include respond(tab-port) {
+          border-radius: 0;
+        }
+
+        @include respond(phone-small) {
+          border-top-right-radius: 5px;
+          border-top-left-radius: 5px;
+        }
+
+        max-width: 47.9rem;
+      }
+    }
+    &__p {
+      color: $color-blue;
+      font-weight: 700;
+    }
+    &__price {
+      @include alignCenter;
+      box-sizing: border-box;
+      margin: auto;
+      font-size: 48px;
+      color: $color-blue;
+    }
+  }
+
+  .section-aboutCompany {
+    text-align: unset;
+
+    .border-bottom {
+      @include alignCenter;
+      flex-direction: column;
+      margin-top: 2.4rem;
+      padding-bottom: 5.4rem;
+      border-bottom: 2px solid $color-grey-7;
+      border-radius: 5px;
+    }
+    .u-flex {
+      width: 100%;
+      max-width: 97rem;
+      gap: 16px;
+      @include respond(phone) {
+        flex-direction: column;
+        gap: 12px;
+        max-width: unset;
+      }
+    }
+    ul {
+      padding: 0 0 0 $icon-size;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      max-width: 40.5rem;
+      &:nth-of-type(1) {
+        max-width: 35.5rem;
+      }
+      @include respond(phone) {
+        max-width: unset;
+        &:nth-of-type(1) {
+          max-width: unset;
+        }
+      }
+    }
+
+    ul li {
+      padding-left: $gutter;
+      color: $color-grey--light;
+    }
+
+    ul li::marker {
+      color: $color-blue;
+      font: var(--fa-font-solid);
+      content: "\f00c";
+    }
+    .heading-h4 {
+      color: $color-blue;
+      text-align: center;
+    }
+    & > p {
+      text-align: center;
+      max-width: unset;
+    }
+  }
+}
+
+.section-products {
+  margin-top: 5.4rem;
+  text-align: center;
+  .products {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(32rem, 1fr));
+    justify-items: start;
+    column-gap: 24px;
+    row-gap: 32px;
+    &__product {
+      border: 1px solid $color-grey-4;
+      border-top: none;
+      border-radius: 8px;
+      box-shadow: 0 -3px 0 0 $color-blue;
+      padding-bottom: 16px;
+      @include alignCenter;
+      flex-direction: column;
+      gap: 16px;
+      .heading-tertiary {
+        color: $color-blue;
+      }
+      p {
+        max-width: 34rem;
+      }
+
+      img {
+        border-radius: 5px 5px 0 0;
+      }
+    }
+
+    &__list {
+      list-style-type: none;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    &__link {
+      text-decoration: none;
+      color: $color-grey--light;
+      transition: all 0.3s;
+      &:hover {
+        color: $color-grey;
+      }
+    }
+  }
+}

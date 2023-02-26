@@ -25,6 +25,13 @@
   height: auto;
 }
 
+.u-flex {
+  display: flex;
+}
+
+.u-space-between {
+  justify-content: space-between;
+}
 .white {
   color: $color-white;
 }
@@ -62,9 +69,6 @@
   margin-bottom: 2.4rem !important;
   @include respond(phone-small) {
     margin-bottom: 16px !important;
-    &.heading-h4 {
-      margin-bottom: 16px !important;
-    }
   }
 }
 

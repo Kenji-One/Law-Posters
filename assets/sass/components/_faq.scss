@@ -8,6 +8,13 @@
     // border: 1px solid #d1d1d2;
     border-radius: 5px;
     padding: 24px;
+    @include respond(phone) {
+      padding: 14px;
+    }
+  }
+
+  &__question {
+    cursor: pointer;
   }
 
   &__title {
@@ -16,6 +23,9 @@
     @include alignCenter;
     justify-content: space-between;
     gap: 24px;
+    @include respond(phone) {
+      padding: 12px;
+    }
   }
 
   &__answer {

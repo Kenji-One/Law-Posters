@@ -168,6 +168,12 @@ body {
   width: 100%;
   height: auto; }
 
+.u-flex {
+  display: flex; }
+
+.u-space-between {
+  justify-content: space-between; }
+
 .white {
   color: #fff; }
 
@@ -198,9 +204,7 @@ body {
   margin-bottom: 2.4rem !important; }
   @media only screen and (max-width: 25em) {
     .u-margin-bottom-small {
-      margin-bottom: 16px !important; }
-      .u-margin-bottom-small.heading-h4 {
-        margin-bottom: 16px !important; } }
+      margin-bottom: 16px !important; } }
 
 .u-margin-bottom-smallest {
   margin-bottom: 8px !important; }
@@ -359,6 +363,12 @@ body {
   background: #fafafb;
   border-radius: 5px;
   padding: 24px; }
+  @media only screen and (max-width: 37.5em) {
+    .faq__questions {
+      padding: 14px; } }
+
+.faq__question {
+  cursor: pointer; }
 
 .faq__title {
   color: #054f80;
@@ -367,6 +377,9 @@ body {
   align-items: center;
   justify-content: space-between;
   gap: 24px; }
+  @media only screen and (max-width: 37.5em) {
+    .faq__title {
+      padding: 12px; } }
 
 .faq__answer {
   color: #777777; }
@@ -613,6 +626,7 @@ body {
 
 .open-btn,
 .close-btn {
+  cursor: pointer;
   border: none;
   background: none;
   font-size: 32px; }
@@ -1184,3 +1198,180 @@ body {
 .section-faq h3 {
   color: #171717;
   font-weight: 700; }
+
+.law-poster #con-349j {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 8px; }
+
+.law-poster .setState__left {
+  display: block;
+  text-align: center; }
+  .law-poster .setState__left img {
+    border-top-left-radius: 5px;
+    max-width: 47.9rem; }
+    @media only screen and (max-width: 56.25em) {
+      .law-poster .setState__left img {
+        border-radius: 0; } }
+    @media only screen and (max-width: 25em) {
+      .law-poster .setState__left img {
+        border-top-right-radius: 5px;
+        border-top-left-radius: 5px; } }
+
+.law-poster .setState__p {
+  color: #054f80;
+  font-weight: 700; }
+
+.law-poster .setState__price {
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  margin: auto;
+  font-size: 48px;
+  color: #054f80; }
+
+.law-poster .section-aboutCompany {
+  text-align: unset; }
+  .law-poster .section-aboutCompany .border-bottom {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 2.4rem;
+    padding-bottom: 5.4rem;
+    border-bottom: 2px solid #d1d1d2;
+    border-radius: 5px; }
+  .law-poster .section-aboutCompany .u-flex {
+    width: 100%;
+    max-width: 97rem;
+    gap: 16px; }
+    @media only screen and (max-width: 37.5em) {
+      .law-poster .section-aboutCompany .u-flex {
+        flex-direction: column;
+        gap: 12px;
+        max-width: unset; } }
+  .law-poster .section-aboutCompany ul {
+    padding: 0 0 0 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    max-width: 40.5rem; }
+    .law-poster .section-aboutCompany ul:nth-of-type(1) {
+      max-width: 35.5rem; }
+    @media only screen and (max-width: 37.5em) {
+      .law-poster .section-aboutCompany ul {
+        max-width: unset; }
+        .law-poster .section-aboutCompany ul:nth-of-type(1) {
+          max-width: unset; } }
+  .law-poster .section-aboutCompany ul li {
+    padding-left: 8px;
+    color: #777777; }
+  .law-poster .section-aboutCompany ul li::marker {
+    color: #054f80;
+    font: var(--fa-font-solid);
+    content: "\f00c"; }
+  .law-poster .section-aboutCompany .heading-h4 {
+    color: #054f80;
+    text-align: center; }
+  .law-poster .section-aboutCompany > p {
+    text-align: center;
+    max-width: unset; }
+
+.section-products {
+  margin-top: 5.4rem;
+  text-align: center; }
+  .section-products .products {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(32rem, 1fr));
+    justify-items: start;
+    column-gap: 24px;
+    row-gap: 32px; }
+    .section-products .products__product {
+      border: 1px solid #ddd;
+      border-top: none;
+      border-radius: 8px;
+      box-shadow: 0 -3px 0 0 #054f80;
+      padding-bottom: 16px;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      gap: 16px; }
+      .section-products .products__product .heading-tertiary {
+        color: #054f80; }
+      .section-products .products__product p {
+        max-width: 34rem; }
+      .section-products .products__product img {
+        border-radius: 5px 5px 0 0; }
+    .section-products .products__list {
+      list-style-type: none;
+      display: flex;
+      flex-direction: column;
+      gap: 12px; }
+    .section-products .products__link {
+      text-decoration: none;
+      color: #777777;
+      transition: all 0.3s; }
+      .section-products .products__link:hover {
+        color: #bbb; }
+
+.products-archive h4 {
+  font-weight: 700;
+  color: #054f80; }
+
+.products-archive p {
+  color: #777777; }
+
+.products-archive .section-products {
+  margin-top: 24px;
+  text-align: unset; }
+
+.products-archive .products {
+  grid-template-columns: repeat(auto-fit, minmax(22.5rem, 1fr)); }
+
+.section-all-updates .heading-h4 {
+  color: #054f80; }
+
+.update__updates {
+  display: flex;
+  flex-direction: column;
+  gap: 3.2rem; }
+  .update__updates.by-state {
+    gap: 18px; }
+  .update__updates.by-update {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    padding: 16px 20px;
+    border: 1px solid #d1d1d2; }
+
+.update__left {
+  display: flex;
+  flex-direction: column;
+  gap: 0; }
+
+.update__right {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: 32px; }
+
+.update__heading {
+  font-weight: 600;
+  color: #fff;
+  text-transform: uppercase;
+  background-color: #054f80;
+  padding: 16px 12px; }
+
+.update__see-history, .update__state {
+  text-decoration: none;
+  color: #054f80;
+  transition: all 0.3s; }
+  .update__see-history:hover, .update__state:hover {
+    text-decoration: underline; }
+
+.update__update {
+  color: #777777; }
+
+.update__title {
+  padding: 8px 0; }
