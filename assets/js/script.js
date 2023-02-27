@@ -77,3 +77,23 @@ const swiper = new Swiper(".swiper", {
     },
   },
 });
+
+// select state
+
+const stateSelector = document.querySelector(".state-list");
+
+stateSelector.addEventListener("change", () => {
+  const stateEl = document.getElementById(stateSelector.value);
+  stateEl.parentNode.classList.toggle("active");
+  stateEl.scrollIntoView();
+});
+
+// updated states
+
+const toggles = document.querySelectorAll(".state-toggle");
+
+toggles.forEach((toggle) => {
+  toggle.addEventListener("click", () => {
+    toggle.parentNode.classList.toggle("active");
+  });
+});

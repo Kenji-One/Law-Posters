@@ -12,6 +12,22 @@
 
     &.by-state {
       gap: 18px;
+      .select-state {
+        & .state-list {
+          border: 1px solid $color-grey-6;
+          background: none;
+          color: $color-white;
+          padding: 2px 8px;
+          font-weight: 400;
+          &:focus {
+            outline: none;
+          }
+          & option {
+            background: $color-blue;
+            text-shadow: 0 1px 0 rgba(0, 0, 0, 0.4);
+          }
+        }
+      }
     }
 
     &.by-update {
@@ -21,6 +37,47 @@
       gap: 16px;
       padding: 16px 20px;
       border: 1px solid $color-grey-7;
+      @include respond(phone) {
+        flex-direction: column;
+        padding: 12px 14px;
+        justify-content: start;
+      }
+    }
+  }
+  &__state-box {
+    padding: 16px 36px;
+    border: 1px solid $color-grey-7;
+    position: relative;
+    @include respond(phone) {
+      padding: 16px 28px;
+    }
+    & > p {
+      padding: 0;
+      cursor: pointer;
+      i {
+        position: absolute;
+        left: 16px;
+        @include respond(phone) {
+          left: 8px;
+        }
+        top: 18px;
+        transition: all 0.3s;
+      }
+    }
+    .update__updates {
+      padding: 16px 14px;
+      display: none;
+    }
+
+    &.active {
+      & > p {
+        i {
+          transform: rotate(180deg);
+        }
+      }
+      .update__updates {
+        display: flex;
+      }
     }
   }
 
@@ -32,9 +89,18 @@
 
   &__right {
     display: flex;
+    @include alignCenter;
     flex-direction: column;
     justify-content: flex-end;
-    gap: 32px;
+    gap: 24px;
+    @include respond(phone) {
+      flex-direction: row;
+      align-items: center;
+    }
+
+    .btn__yellow {
+      width: max-content;
+    }
   }
 
   &__heading {
@@ -43,12 +109,17 @@
     text-transform: uppercase;
     background-color: $color-blue;
     padding: 16px 12px;
+    &.select-state {
+      @include alignCenter;
+      justify-content: space-between;
+    }
   }
 
   &__see-history,
   &__state {
     text-decoration: none;
     color: $color-blue;
+    width: max-content;
     transition: all 0.3s;
     &:hover {
       text-decoration: underline;

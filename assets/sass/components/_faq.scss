@@ -8,6 +8,15 @@
     // border: 1px solid #d1d1d2;
     border-radius: 5px;
     padding: 24px;
+    & > .heading-primary--sub {
+      color: $color-blue;
+      padding-bottom: 8px;
+      text-align: start;
+      border-bottom: 1px solid $color-grey-7;
+      &:not(:first-child) {
+        margin-top: 12px;
+      }
+    }
     @include respond(phone) {
       padding: 14px;
     }
@@ -30,5 +39,36 @@
 
   &__answer {
     color: $color-grey--light;
+  }
+
+  &__list {
+    list-style-type: none;
+    @include alignCenter;
+    gap: 8px;
+    flex-wrap: wrap;
+    i {
+      font-size: 4px;
+    }
+  }
+
+  &__link {
+    color: $color-blue;
+    text-decoration: none;
+    transition: all 0.3s;
+    &:hover {
+      color: $color-blue--light;
+    }
+  }
+}
+
+.faq-page {
+  section {
+    & > h3 {
+      color: $color-blue;
+      font-weight: 500;
+    }
+    & > p {
+      color: $color-blue--light;
+    }
   }
 }
