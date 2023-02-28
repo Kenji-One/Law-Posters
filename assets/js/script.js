@@ -50,6 +50,21 @@ const addActive = (el) => document.getElementById(el).classList.add("active");
 const removeActive = (el) =>
   document.getElementById(el).classList.remove("active");
 
+// single product info section navigation
+
+const showContent = (content, el) => {
+  console.log(el);
+  const contentEl = document.getElementById(content);
+  if (!contentEl.classList.contains("active")) {
+    const btns = document.querySelectorAll(".info-btn");
+    const contents = document.querySelectorAll(".info-content");
+    btns.forEach((btn) => btn.classList.remove("active"));
+    contents.forEach((content) => content.classList.remove("active"));
+    el.classList.add("active");
+    contentEl.classList.add("active");
+  }
+};
+
 ///////////////////////////////////////////////////////////
 // Set current year
 const yearEl = document.querySelector(".year");
@@ -81,12 +96,13 @@ const swiper = new Swiper(".swiper", {
 // select state
 
 const stateSelector = document.querySelector(".state-list");
-
-stateSelector.addEventListener("change", () => {
-  const stateEl = document.getElementById(stateSelector.value);
-  stateEl.parentNode.classList.toggle("active");
-  stateEl.scrollIntoView();
-});
+if (stateSelector) {
+  stateSelector.addEventListener("change", () => {
+    const stateEl = document.getElementById(stateSelector.value);
+    stateEl.parentNode.classList.toggle("active");
+    stateEl.scrollIntoView();
+  });
+}
 
 // updated states
 
